@@ -5,37 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page Title</title>
-    <link rel="stylesheet" type="text/css" href="./vendors/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="vendors/bootstrap.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="styles/styles.css" />
-    <script src="client/client.js"></script>
+    <script type="text/javascript" src="vendors/angular.js"></script>
+    <script type="text/javascript" src="client/data.js"></script>
+    <script type="text/javascript" src="client/client.js"></script>
 </head>
-<body>
-    <div class="container-fluid" id="header">
-        <h1 class="text-center">Story of My Life</h1>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-4">
-                .col-md-4
+<body ng-app="myApp">
+    <div ng-controller="GalleryController as GC" ng-cloak>
+        <div class="container-fluid" id="header">
+            <h1 class="text-center">Story of My Life</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <h5>Boyd Shenanigans</h5>
+                    <img src="images/boyd_shenanigans.jpg" alt="Boyd Shenanigans" class="img-thumbnail">
+                </div>
+                <div class="col-xs-4">
+                    <h5>Wedding Party</h5>
+                    <img src="images/wedding_party.jpg" alt="Wedding Party" class="img-thumbnail">
+                </div>
+                <div class="col-xs-4">
+                    <h5>Family</h5>
+                    <img src="images/family.jpg" alt="Family" class="img-thumbnail">
+                </div>
             </div>
-            <div class="col-xs-4">
-                .col-md-4
-            </div>
-            <div class="col-xs-4">
-                .col-md-4
+            <div class="row">
+                <div class="col-xs-4">
+                    <h5>Gatsby</h5>
+                    <img src="images/gatsby.jpg" alt="Gatsby" class="img-thumbnail">
+                </div>
+                <div class="col-xs-4">
+                    <h5>Scout</h5>
+                    <img src="images/scout.jpg" alt="Scout" class="img-thumbnail">
+                </div>
+                <div class="col-xs-4">
+                    <h5>Eclipse</h5>
+                    <img src="images/eclipse.jpg" alt="Eclipse" class="img-thumbnail">
+                </div>
             </div>
         </div>
-        <div class="row">
-                <div class="col-xs-4">
-                    .col-md-4
-                </div>
-                <div class="col-xs-4">
-                    .col-md-4
-                </div>
-                <div class="col-xs-4">
-                    .col-md-4
-                </div>
-            </div>
     </div>
 </body>
 </html>
