@@ -1,0 +1,10 @@
+#header {
+    background-color: tomato;
+    height: 100px;
+    color: white;
+}
+
+.col-xs-4 {
+    border: 1px solid gray;
+    height: 100px;
+}
