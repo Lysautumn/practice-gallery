@@ -65,6 +65,10 @@ Stretch goals:
             </div>
         </div>
     ```
+- ```CSS
+    .col-xs-4 {
+        height: 250px;
+    }```
 
 ## Step 3: Add Controller
 
@@ -84,7 +88,12 @@ Stretch goals:
 
 - Controller in client.js
 - ```JavaScript
+    const app = angular.module('myApp', []);
 
+    app.controller('GalleryController', function() {
+    console.log('GalleryController loaded');
+
+    }
     ```
 - Source controller (in wrapper div) and app (in body tag) in HTML before testing:
 ```HTML
@@ -94,6 +103,62 @@ Stretch goals:
         </div>
     </body>
 ```
+
+## Step 4: ng-repeat and ng-src
+
+- ```HTML
+    <div class="container">
+            <div class="row" ng-controller="GalleryController as GC" ng-cloak>
+                <div class="col-xs-4" ng-repeat="photo in GC.photos">
+                    <span class="description">{{photo.description}}</span>
+                    <img class="img-thumbnail" ng-src="{{photo.path}}" alt="{{photo.description}}" />
+                </div>
+            </div>
+        </div>```
+
+## Step 5: Toggle
+
+- ```JavaScript
+    app.controller('GalleryController', function() {
+    console.log('GalleryController loaded');
+    
+    let gallery = this;
+
+    gallery.photos = placeholder.data;
+    
+    gallery.toggleDesc = toggleDesc;
+
+    function toggleDesc(image) {
+        image.showText = !image.showText
+    };```
+
+- ```HTML
+    <div class="col-xs-4" ng-repeat="photo in GC.photos">
+        <div class="card">
+            <div class="button-style" ng-click="GC.toggleDesc(photo)">
+                <span ng-show="photo.showText" class="description">{{photo.description}}</span>
+                <img ng-class="{'hidden': photo.showText}" class="img-thumbnail" ng-src="{{photo.path}}" alt="{{photo.description}}" />
+            </div>
+        </div>
+    </div>
+    ```
+- ```CSS
+    img {
+        margin-top: 50px;
+    }
+
+    .description {
+        display: block;
+        height: 100px;
+        margin-top: 50px;
+        background-color: tomato;
+        padding: 25px;
+        color: white;
+        border-radius: 3px;
+    }```
+
+- 
+
 
 
 

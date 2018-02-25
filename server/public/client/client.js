@@ -8,6 +8,12 @@ app.controller('GalleryController', function() {
     let gallery = this;
 
     gallery.photos = placeholder.data;
+    
+    gallery.toggleDesc = toggleDesc;
+
+    function toggleDesc(image) {
+        image.showText = !image.showText
+    };
 });
 
 

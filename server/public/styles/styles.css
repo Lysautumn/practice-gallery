@@ -1,10 +1,26 @@
+body {
+    background-color: gainsboro
+}   
 #header {
-    background-color: tomato;
+    background-color: darkblue;
     height: 100px;
     color: white;
 }
 
 .col-xs-4 {
-    border: 1px solid gray;
     height: 250px;
+}
+
+img {
+    margin-top: 50px;
+}
+
+.description {
+    display: block;
+    height: 100px;
+    margin-top: 50px;
+    background-color: tomato;
+    padding: 25px;
+    color: white;
+    border-radius: 3px;
 }
